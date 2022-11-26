@@ -12,6 +12,7 @@ const parseChainId = (chainId) =>
 
 const filesWithErrors = []
 for (const chainFile of chainFiles) {
+  console.log(chainFile);
   const fileLocation = `../_data/chains/${chainFile}`
   const fileData = fs.readFileSync(fileLocation, "utf8")
   const fileDataJson = JSON.parse(fileData)
